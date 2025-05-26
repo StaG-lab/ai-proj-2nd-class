@@ -1,0 +1,1 @@
+# ai-proj-2nd-class
