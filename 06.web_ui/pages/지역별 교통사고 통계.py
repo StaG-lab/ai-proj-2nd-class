@@ -485,7 +485,7 @@ with tabs[2]:
         """지정된 테이블에서 모든 데이터를 Pandas DataFrame으로 로드합니다."""
         try:
             query = f"SELECT * FROM {table_name}"
-            df = pd.read_sql(query, engine)
+            df = pd.read_sql(text(query), engine.connect())
             st.write(f"'{table_name}' 테이블 로드 완료. {len(df)} 행.")
             # 날짜/시간 컬럼 타입 변환 (필요시)
             if 'game_date' in df.columns:
