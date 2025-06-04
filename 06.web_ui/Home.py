@@ -1,11 +1,9 @@
 import streamlit as st
+from utils.layout import set_config, login_widget
 
-st.set_page_config(
-    initial_sidebar_state="collapsed",
-    page_icon="🚗",
-    page_title="스포츠 교통사고 예방"
-)
-
+set_config()
 st.title("⚾⚽스포츠 교통사고 예방🏀🏐")
+
+login_widget()
 
 st.write("이곳은 메인 페이지입니다.")
