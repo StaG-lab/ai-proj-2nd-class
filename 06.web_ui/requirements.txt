@@ -1,0 +1,12 @@
+streamlit
+sqlalchemy
+pymysql
+streamlit-option-menu
+matplotlib
+numpy
+pandas
+seaborn
+datetime
+time
+holiday
+json
