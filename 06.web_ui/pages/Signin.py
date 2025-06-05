@@ -4,6 +4,8 @@ from utils.auth import authenticate_user
 
 set_config()
 
+st.image("./06.web_ui/images/registration-3938434_2.jpg", use_container_width=True)
+
 st.title("🔐 로그인")
 
 # 로그인 폼
