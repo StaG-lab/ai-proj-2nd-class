@@ -6,7 +6,6 @@ matplotlib
 numpy
 pandas
 seaborn
-datetime
 holidays
-json
 bcrypt
+cryptography

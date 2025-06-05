@@ -1,1 +1,5 @@
+# db_config.json 파일 무시
 **/db_config.json
+
+# Python 바이트코드 무시
+__pycache__/
