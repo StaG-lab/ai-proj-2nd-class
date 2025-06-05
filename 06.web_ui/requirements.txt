@@ -9,3 +9,4 @@ seaborn
 holidays
 bcrypt
 cryptography
+statsmodels
