@@ -2,11 +2,19 @@ import streamlit as st
 
 def set_config():
     st.set_page_config(
-        initial_sidebar_state="collapsed",
+        initial_sidebar_state="expanded",
         page_icon="🚗",
         layout="wide",
         page_title="스포츠 교통사고 예방"
     )
+
+    st.sidebar.page_link("Home.py", label="🏡 메인페이지")
+    st.sidebar.page_link("pages/날짜별 교통사고 통계.py", label="📅 날짜별 교통사고 통계")
+    st.sidebar.page_link("pages/스포츠 종목별 교통사고 통계.py", label="🥎 스포츠 종목별 교통사고 통계")
+    st.sidebar.page_link("pages/지역별 교통사고 통계 (검색).py", label="🚞 지역별 교통사고 통계")
+    st.sidebar.page_link("pages/경기 유무에 따른 교통사고율 비교.py", label="👓 경기 유무에 따른 교통사고율 비교")
+    st.sidebar.page_link("pages/경기 유형에 따른 교통사고율 비교.py", label="🎆 경기 유형에 따른 교통사고율 비교")
+    return
 
 def login_widget():
     placeholder = st.empty()
@@ -22,11 +30,9 @@ def login_widget():
                 with cols2[1]:
                     if st.button("로그아웃"):
                         st.session_state.clear()
+                        st.toast("로그아웃 되었습니다.")
                         st.rerun()
             else:
                 if st.button("로그인"):
                     st.page_link("pages/Signin.py", label="로그인하러 가기")
-
-
-def sidebar_widget():
-    return
+  
