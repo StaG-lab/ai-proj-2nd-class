@@ -4,6 +4,8 @@ from sqlalchemy import create_engine, text
 from datetime import date, timedelta, time 
 import json
 
+st.image("./06.web_ui/images/writing-7702615_2.jpg", use_container_width=True)
+
 st.title("날짜별 교통사고 통계")
 
 tabs = st.tabs(["연도별(Year)", "월별(Month)", "요일별(Day)"])

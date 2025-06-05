@@ -3,14 +3,14 @@ from utils.layout import set_config
 from utils.auth import signup_user
 import re
 
+set_config()
+st.image("./06.web_ui/images/people-1979261_3.jpg", use_container_width=True)
 
 # 전화번호 유효성 검사 함수
 def is_valid_phone_number(phone_number: str) -> bool:
     pattern = r'^010-\d{4}-\d{4}$'
     return re.match(pattern, phone_number) is not None
 
-
-set_config()
 st.title("📝 회원가입")
 
 userid = st.text_input("아이디")
