@@ -8,10 +8,10 @@
 
 * requirements 설치
     ```cmd
-    pip install -r requirements.txt
+    pip install -r 06.web_ui/requirements.txt
     ```
 
 * 앱 구동
     ```cmd
-    streamlit run Home.py
+    streamlit run 06.web_ui/Home.py
     ```
