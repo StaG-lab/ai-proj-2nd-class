@@ -16,10 +16,21 @@ login_widget()
 st.write("> ##### 스포츠 경기가 있는 날에는 교통사고가 더 많이 일어날까?")
 
 
-# ==================================== 모델링 ====================================
-mpl.rcParams['font.family'] = 'NanumGothic'
-mpl.rcParams['axes.unicode_minus'] = False
+import platform
 
+system = platform.system()
+font_name = "NanumGothic" # Linux
+
+if system == 'Darwin':  # macOS
+    font_name = 'AppleGothic'
+elif system == 'Windows': # Windows
+    font_name = 'Malgun Gothic'
+
+plt.rcParams['font.family'] = font_name
+plt.rcParams['axes.unicode_minus'] = False
+
+
+# ==================================== 모델링 ====================================
 # 0. 데이터셋 로드 + 결측치 처리
 df = pd.read_csv('./04.data_preprocess/2nd-dataset_20230101~20241231_전국_전종목_전체요일_20250605_113550.csv')
 
