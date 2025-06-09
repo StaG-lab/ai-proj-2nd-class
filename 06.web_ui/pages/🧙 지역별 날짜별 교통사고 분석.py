@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy.stats import pearsonr, spearmanr
+from scipy.stats import spearmanr
 import json
 import pymysql
 import holidays
@@ -15,11 +15,23 @@ import time
 from sqlalchemy import create_engine, text
 from datetime import datetime
 import os
+import platform
 
+system = platform.system()
+font_name = "NanumGothic" # Linux
+
+if system == 'Darwin':  # macOS
+    font_name = 'AppleGothic'
+elif system == 'Windows': # Windows
+    font_name = 'Malgun Gothic'
+    
+plt.rcParams['font.family'] = font_name
+plt.rcParams['axes.unicode_minus'] = False
+    
 st.set_page_config(layout="wide")
 #st.image("./images/accident-5167244_2.jpg", use_container_width=True)
 st.image("./06.web_ui/images/accident-5167244_2.jpg", use_container_width=True)
-st.title("데이터셋 생성 마법사 🧙")
+st.title("🧙 지역별 날짜별 교통사고 분석")
 st.write("")
 
 def database_connector():
@@ -487,8 +499,6 @@ def display_reset_dataset():
 
 def display_step5_dataset_info():
     st.subheader("데이터셋 정보 및 결측치 확인")
-    plt.rcParams['font.family'] = 'Malgun Gothic'
-    plt.rcParams['axes.unicode_minus'] = False
     if st.session_state.tab0_current_step >= 5:
         col1, col2 = st.columns([0.8,0.2])
         with col1:
