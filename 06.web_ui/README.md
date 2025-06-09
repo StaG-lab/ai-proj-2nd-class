@@ -13,5 +13,5 @@
 
 * 앱 구동
     ```cmd
-    streamlit run 06.web_ui/Home.py
+    streamlit run --client.showSidebarNavigation=False 06.web_ui/Home.py
     ```

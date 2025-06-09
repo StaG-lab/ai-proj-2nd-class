@@ -3,6 +3,8 @@
 # pip install -r requirements.txt
 
 import streamlit as st
+from utils.layout import set_config, login_widget
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,10 +30,12 @@ elif system == 'Windows': # Windows
 plt.rcParams['font.family'] = font_name
 plt.rcParams['axes.unicode_minus'] = False
     
-st.set_page_config(layout="wide")
+    
+set_config()
 #st.image("./images/accident-5167244_2.jpg", use_container_width=True)
 st.image("./06.web_ui/images/accident-5167244_2.jpg", use_container_width=True)
 st.title("🧙 지역별 날짜별 교통사고 분석")
+login_widget()
 st.write("")
 
 def database_connector():
