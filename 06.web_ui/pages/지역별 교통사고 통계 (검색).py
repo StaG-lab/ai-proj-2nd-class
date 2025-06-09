@@ -1,4 +1,6 @@
 import streamlit as st
+from utils.layout import set_config, login_widget
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,10 +11,11 @@ import holiday
 import time
 from sqlalchemy import create_engine, text
 
+set_config()
 st.image("./06.web_ui/images/accident-5167244_2.jpg", use_container_width=True)
 
 st.title("지역별 교통사고 통계")
-
+login_widget()
 st.write("")
 
 tabs = st.tabs(["검색창","수원(예시)", "송파(예시)"])

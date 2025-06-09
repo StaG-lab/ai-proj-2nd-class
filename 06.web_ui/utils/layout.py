@@ -9,13 +9,16 @@ def set_config():
     )
 
     st.sidebar.page_link("Home.py", label="🏡 메인페이지")
-    st.sidebar.page_link("pages/날짜별 교통사고 통계.py", label="📅 날짜별 교통사고 통계")
-    st.sidebar.page_link("pages/스포츠 종목별 교통사고 통계.py", label="🥎 스포츠 종목별 교통사고 통계")
-    st.sidebar.page_link("pages/지역별 교통사고 통계 (검색).py", label="🚞 지역별 교통사고 통계")
     st.sidebar.page_link("pages/경기 유무에 따른 교통사고율 비교.py", label="1️⃣ 경기 유무에 따른 교통사고율 비교")
     st.sidebar.page_link("pages/스포츠 종목별 교통사고율 비교.py", label="2️⃣ 스포츠 종목별 교통사고율 비교")
     st.sidebar.page_link("pages/경기 중요도에 따른 교통사고율 비교.py", label="3️⃣ 경기 중요도에 따른 교통사고율 비교")
+    st.sidebar.page_link("pages/🧙 지역별 날짜별 교통사고 분석.py", label="🧙🏻‍♂️ 데이터셋 마법사")
+    st.sidebar.write("---")
+    st.sidebar.write("기타 페이지 (임시)")
+    st.sidebar.page_link("pages/지역별 교통사고 통계 (검색).py", label="🚞 지역별 교통사고 통계")
+
     return
+
 
 def login_widget():
     placeholder = st.empty()

@@ -1,5 +1,6 @@
 import streamlit as st
 from utils.layout import set_config, login_widget
+from utils.auth import authenticate_user
 
 
 set_config()
