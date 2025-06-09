@@ -65,8 +65,6 @@ chi2 = result.pearson_chi2
 r2 = (1 - np.exp((2/n) * (llnull - llf))) / (1 - np.exp((2/n) * llnull))
 
 # 3. 모델 평가
-mpl.rcParams['font.family'] = 'NanumGothic'
-mpl.rcParams['axes.unicode_minus'] = False
 df_model['predicted'] = result.predict(df_model)
 df_model['residuals'] = df_model['accident_score'] - df_model['predicted']
 

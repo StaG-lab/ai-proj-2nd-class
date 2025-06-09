@@ -11,9 +11,9 @@ import statsmodels.formula.api as smf
 from datetime import date, timedelta, time
 
 set_config()
-st.title("경기 유무에 따른 교통사고율 비교")
+st.title("날씨에 따른 교통사고율 비교")
 login_widget()
-st.write("> ##### 스포츠 경기가 있는 날에는 교통사고가 더 많이 일어날까?")
+st.write("> ##### 눈, 비가 오는 날에 교통사고가 더 많이 발생할까?")
 
 
 import platform
